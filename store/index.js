@@ -4,7 +4,7 @@ const createStore = () => {
   return new Vuex.Store({
     state: function() { // state => ストアで管理する値,stateの値は常にfunctionにしなくてはならない ,コンポーネントのdataオプションみたいなもの
       return{ //オブジェクトを返す
-        message: 'Hello Vuex!'
+        message: 'Hello Vuex from store.'
       }
     }
   })
