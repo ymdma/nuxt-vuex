@@ -1,12 +1,26 @@
+<!--
+データフローの流れを（それぞれ）実装
+テンプレート→アクション→ミューテーション→ステート(のmessageの値を)変更して、
+vueインスタンス内のマスタッシュ構文で表示したテキストを変える
+-->
+
 <template>
 
   <div class="container">
     <div>
       <p>{{ $store.state.message }}</p>
+
       <!-- <button v-on:click="$store.commit('updateMessage')">update</button></!-->
       <!-- ミューテーションの機能をコンポーネントから呼び出すには、commitメソッドを利用する。 -->
-      <button v-on:click="$store.commit('updateMessage','Commit with payload')">update</button>
-        <!-- ミューテーションに値を渡すには、comitに引数を追加する -->
+
+      <!-- <button v-on:click="$store.commit('updateMessage','Commit with payload')">update</button> -->
+      <!-- ミューテーションに値を渡すには、comitに引数を追加する -->
+
+      <!-- <button v-on:click="$store.dispatch('updateMessageAction')">Dispatch</button> -->
+      <!-- アクションを経由する(commit → dispatchメソッド) -->
+
+      <button v-on:click="$store.dispatch('updateMessageAction','Dispatch wiht payload')">Dispatch</button>
+      <!-- アクションに値を渡す(commit → dispatchメソッド) -->
     </div>
   </div>
 
