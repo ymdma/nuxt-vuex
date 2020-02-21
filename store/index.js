@@ -13,6 +13,7 @@ const createStore = () => {
     //     state.message = 'updated!'
     //   }
     // }
+    // ↓第二引数がある場合の受け取り方
     mutations: {
       updateMessage: function(state,payload) {
         state.message = payload
