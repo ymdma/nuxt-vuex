@@ -6,6 +6,12 @@ const createStore = () => {
       return{ //オブジェクトを返す
         message: 'Hello Vuex from store.'
       }
+    },
+    // ↓値を操作するための記述（ミューテーション）
+    mutations: {
+      updateMessage: function(state) {
+        state.message = 'updated!'
+      }
     }
   })
 }
