@@ -3,8 +3,10 @@
   <div class="container">
     <div>
       <p>{{ $store.state.message }}</p>
-      <button v-on:click="$store.commit('updateMessage')">update</button>
+      <!-- <button v-on:click="$store.commit('updateMessage')">update</button></!-->
       <!-- ミューテーションの機能をコンポーネントから呼び出すには、commitメソッドを利用する。 -->
+      <button v-on:click="$store.commit('updateMessage','Commit with payload')">update</button>
+        <!-- ミューテーションに値を渡すには、comitに引数を追加する -->
     </div>
   </div>
 
